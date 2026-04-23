@@ -1,0 +1,45 @@
+# Hearthstone — Ghostty theme
+# https://github.com/jackson-hughes/hearthstone-theme
+#
+# Dark theme. Warm charcoal base, earthy syntax palette.
+# Backgrounds derived from hsl(60, 2%, n%) — the tiny warm tint
+# prevents the cold-screen feel without being visibly brown.
+#
+# ANSI slot mapping tuned for Powerlevel10k:
+#   slot 4 = orange  (p10k DIR_FOREGROUND)
+#   slot 2 = teal    (p10k VCS_CLEAN_FOREGROUND)
+#   slot 3 = orange  (p10k VCS_MODIFIED_FOREGROUND, execution time)
+#   slot 1 = rose    (p10k STATUS_ERROR_FOREGROUND)
+
+# ── Surfaces ──────────────────────────────────────────────────
+background = 1c1c1b
+foreground = f8f8f6
+
+# ── Cursor ────────────────────────────────────────────────────
+cursor-color = e07838
+cursor-text = 1c1c1b
+
+# ── Selection ─────────────────────────────────────────────────
+selection-background = 252523
+selection-foreground = f8f8f6
+
+# ── ANSI palette ──────────────────────────────────────────────
+# Normal colours
+palette = 0=#212120
+palette = 1=#c86878
+palette = 2=#80c0b0
+palette = 3=#e07838
+palette = 4=#e07838
+palette = 5=#b888c8
+palette = 6=#80c0b0
+palette = 7=#c3c2b7
+
+# Bright colours
+palette = 8=#686866
+palette = 9=#d898a8
+palette = 10=#a0d0c0
+palette = 11=#f09848
+palette = 12=#f09848
+palette = 13=#c8a0d8
+palette = 14=#a0d0c0
+palette = 15=#f8f8f6

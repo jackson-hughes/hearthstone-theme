@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hearthstone — Final Palette</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1f1f1e; color: #f8f8f6; font-family: -apple-system, 'Helvetica Neue', sans-serif; padding: 2rem; }
+
+  h1 { font-size: 11px; font-weight: 500; color: #6a6a68; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem; }
+  .subtitle { font-size: 12px; color: #c3c2b7; margin-bottom: 2rem; }
+
+  .editor-frame { border-radius: 10px; overflow: hidden; border: 0.5px solid rgba(255,255,255,0.08); margin-bottom: 2rem; }
+  .titlebar { display: flex; align-items: center; gap: 6px; padding: 8px 14px; background: #1c1c1b; }
+  .dot { width: 11px; height: 11px; border-radius: 50%; }
+  .tabs { display: flex; background: #212120; border-bottom: 0.5px solid rgba(255,255,255,0.06); }
+  .tab-a { padding: 6px 18px; font-size: 12px; color: #f8f8f6; border-bottom: 2px solid #e07838; margin-bottom: -0.5px; background: #1c1c1b; }
+  .tab-i { padding: 6px 18px; font-size: 12px; color: #c3c2b7; }
+  .layout { display: flex; }
+  .sidebar { width: 165px; padding: 10px 0; flex-shrink: 0; background: #212120; border-right: 0.5px solid rgba(255,255,255,0.05); }
+  .si { padding: 3px 14px; font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
+  .si.sh { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
+  .si.active { border-left: 2px solid #e07838; padding-left: 12px; background: #1c1c1b; }
+  .si.indent { padding-left: 24px; }
+  .editor { flex: 1; padding: 12px 16px; background: #1c1c1b; font-family: 'SF Mono','Fira Code','Cascadia Code','Consolas',monospace; font-size: 12px; }
+  .line { display: flex; gap: 12px; line-height: 1.75; white-space: pre; }
+  .ln { min-width: 20px; text-align: right; user-select: none; color: #6a6a68; }
+  .hl { background: #252523; border-left: 2px solid rgba(224,120,56,0.45); }
+  .hl .ln { color: #888886; }
+  .terminal { padding: 10px 16px; background: #1f1f1e; border-top: 0.5px solid rgba(255,255,255,0.05); font-family: 'SF Mono','Fira Code','Cascadia Code','Consolas',monospace; font-size: 12px; line-height: 1.7; }
+  .tl { display: flex; white-space: pre; }
+  .term-tabs { display: flex; gap: 16px; border-bottom: 0.5px solid rgba(255,255,255,0.06); padding-bottom: 6px; margin-bottom: 8px; }
+  .tt { font-size: 11px; cursor: default; }
+
+  .palette-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 0; }
+  .pal-group { display: flex; flex-direction: column; gap: 0; }
+  .pal-heading { font-size: 10px; color: #6a6a68; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .pal-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 0.5px solid rgba(255,255,255,0.04); }
+  .pal-row:last-child { border-bottom: none; }
+  .psw { width: 22px; height: 22px; border-radius: 5px; flex-shrink: 0; border: 0.5px solid rgba(255,255,255,0.08); }
+  .phex { font-family: monospace; font-size: 12px; color: #f8f8f6; min-width: 68px; }
+  .prole { font-size: 11px; color: #6a6a68; flex: 1; }
+  .pbadge { font-size: 10px; padding: 1px 7px; border-radius: 10px; white-space: nowrap; }
+  .aaa { background: rgba(128,192,176,0.15); color: #80c0b0; }
+  .aa  { background: rgba(224,120,56,0.12);  color: #e07838; }
+  .aal { background: rgba(255,255,255,0.07);  color: #6a6a68; }
+</style>
+</head>
+<body>
+
+<h1>Hearthstone — Final palette reference</h1>
+<p class="subtitle">Dark theme. Warm charcoal base derived from Claude.ai's design system. Earthy syntax palette with WCAG-verified contrast ratios.</p>
+
+<div class="editor-frame">
+  <div class="titlebar">
+    <div class="dot" style="background:#ff5f56;"></div>
+    <div class="dot" style="background:#ffbd2e;"></div>
+    <div class="dot" style="background:#27c93f;"></div>
+    <span style="font-size:12px; color:#6a6a68; margin-left:8px;">server.go</span>
+    <span style="font-size:12px; color:#6a6a68; margin-left:auto;">Hearthstone</span>
+  </div>
+  <div class="tabs">
+    <div class="tab-a">server.go</div>
+    <div class="tab-i">handler.go</div>
+    <div class="tab-i">config.go</div>
+    <div class="tab-i">README.md</div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <div class="si sh" style="color:#6a6a68;">Explorer</div>
+      <div class="si" style="color:#6a6a68; margin-top:4px;">my-project</div>
+      <div class="si active" style="color:#f8f8f6;">server.go</div>
+      <div class="si indent" style="color:#c3c2b7;">handler.go</div>
+      <div class="si indent" style="color:#c3c2b7;">config.go</div>
+      <div class="si indent" style="color:#c3c2b7;">go.mod</div>
+      <div class="si indent" style="color:#c3c2b7;">README.md</div>
+      <div class="si indent" style="color:#c3c2b7;">Taskfile.yml</div>
+    </div>
+    <div class="editor" style="color:#f8f8f6;">
+      <div class="line"><span class="ln">1</span><span style="color:#686866;">// HTTP server — main entry point</span></div>
+      <div class="line"><span class="ln">2</span><span style="color:#b888c8;">package</span><span> main</span></div>
+      <div class="line"><span class="ln">3</span></div>
+      <div class="line"><span class="ln">4</span><span style="color:#b888c8;">import</span><span> (</span></div>
+      <div class="line"><span class="ln">5</span><span>    </span><span style="color:#80c0b0;">"fmt"</span></div>
+      <div class="line"><span class="ln">6</span><span>    </span><span style="color:#80c0b0;">"net/http"</span></div>
+      <div class="line"><span class="ln">7</span><span>    </span><span style="color:#80c0b0;">"os"</span></div>
+      <div class="line"><span class="ln">8</span><span>)</span></div>
+      <div class="line"><span class="ln">9</span></div>
+      <div class="line"><span class="ln">10</span><span style="color:#b888c8;">type</span><span> </span><span style="color:#e07838;">Config</span><span> </span><span style="color:#b888c8;">struct</span><span> {</span></div>
+      <div class="line"><span class="ln">11</span><span>    </span><span style="color:#e07838;">Addr</span><span>    </span><span style="color:#e07838;">string</span></div>
+      <div class="line"><span class="ln">12</span><span>    </span><span style="color:#e07838;">Version</span><span> </span><span style="color:#e07838;">string</span></div>
+      <div class="line"><span class="ln">13</span><span>}</span></div>
+      <div class="line"><span class="ln">14</span></div>
+      <div class="line hl"><span class="ln">15</span><span style="color:#b888c8;">func</span><span> </span><span style="color:#e07838;">handleRequest</span><span>(</span><span style="color:#7a8a9a;">w</span><span> </span><span style="color:#e07838;">http.ResponseWriter</span><span>, </span><span style="color:#7a8a9a;">r</span><span> *</span><span style="color:#e07838;">http.Request</span><span>) {</span></div>
+      <div class="line hl"><span class="ln">16</span><span>    </span><span style="color:#7a8a9a;">status</span><span> := </span><span style="color:#e07838;">http.StatusOK</span></div>
+      <div class="line hl"><span class="ln">17</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">r</span><span>.</span><span style="color:#e07838;">Method</span><span> != </span><span style="color:#80c0b0;">"GET"</span><span> {</span></div>
+      <div class="line"><span class="ln">18</span><span>        </span><span style="color:#7a8a9a;">status</span><span> = </span><span style="color:#e07838;">http.StatusMethodNotAllowed</span></div>
+      <div class="line"><span class="ln">19</span><span>    }</span></div>
+      <div class="line"><span class="ln">20</span><span>    </span><span style="color:#e07838;">fmt.Fprintf</span><span>(</span><span style="color:#7a8a9a;">w</span><span>, </span><span style="color:#80c0b0;">"status: %d"</span><span>, </span><span style="color:#7a8a9a;">status</span><span>)</span></div>
+      <div class="line"><span class="ln">21</span><span>}</span></div>
+      <div class="line"><span class="ln">22</span></div>
+      <div class="line"><span class="ln">23</span><span style="color:#b888c8;">var</span><span> </span><span style="color:#7a8a9a;">cfg</span><span> = </span><span style="color:#e07838;">Config</span><span>{</span></div>
+      <div class="line"><span class="ln">24</span><span>    </span><span style="color:#e07838;">Addr</span><span>:    </span><span style="color:#80c0b0;">":8080"</span><span>,</span></div>
+      <div class="line"><span class="ln">25</span><span>    </span><span style="color:#e07838;">Version</span><span>: </span><span style="color:#80c0b0;">"1.0.0"</span><span>,</span></div>
+      <div class="line"><span class="ln">26</span><span>}</span></div>
+      <div class="line"><span class="ln">27</span></div>
+      <div class="line"><span class="ln">28</span><span style="color:#b888c8;">func</span><span> </span><span style="color:#e07838;">main</span><span>() {</span></div>
+      <div class="line"><span class="ln">29</span><span>    </span><span style="color:#7a8a9a;">port</span><span> := </span><span style="color:#e07838;">os.Getenv</span><span>(</span><span style="color:#80c0b0;">"PORT"</span><span>)</span></div>
+      <div class="line"><span class="ln">30</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">port</span><span> == </span><span style="color:#80c0b0;">""</span><span> {</span></div>
+      <div class="line"><span class="ln">31</span><span>        </span><span style="color:#7a8a9a;">port</span><span> = </span><span style="color:#7a8a9a;">cfg</span><span>.</span><span style="color:#e07838;">Addr</span></div>
+      <div class="line"><span class="ln">32</span><span>    }</span></div>
+      <div class="line"><span class="ln">33</span><span>    </span><span style="color:#e07838;">http.HandleFunc</span><span>(</span><span style="color:#80c0b0;">"/"</span><span>, </span><span style="color:#e07838;">handleRequest</span><span>)</span></div>
+      <div class="line"><span class="ln">34</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">err</span><span> := </span><span style="color:#e07838;">http.ListenAndServe</span><span>(</span><span style="color:#7a8a9a;">port</span><span>, </span><span style="color:#e07838;">nil</span><span>); </span><span style="color:#7a8a9a;">err</span><span> != </span><span style="color:#e07838;">nil</span><span> {</span></div>
+      <div class="line"><span class="ln">35</span><span>        </span><span style="color:#c86878;">panic</span><span>(</span><span style="color:#7a8a9a;">err</span><span>)</span></div>
+      <div class="line"><span class="ln">36</span><span>    }</span></div>
+      <div class="line"><span class="ln">37</span><span>}</span></div>
+    </div>
+  </div>
+  <div class="terminal">
+    <div class="term-tabs">
+      <span class="tt" style="color:#e07838; border-bottom:1.5px solid #e07838; padding-bottom:5px; margin-bottom:-6.5px;">terminal</span>
+      <span class="tt" style="color:#c3c2b7;">output</span>
+      <span class="tt" style="color:#c3c2b7;">problems</span>
+    </div>
+    <div class="tl"><span style="color:#e07838;">~/my-project</span><span style="color:#686866;"> on </span><span style="color:#80c0b0;">main</span><span style="color:#686866;"> › </span><span style="color:#f8f8f6;">go run .</span></div>
+    <div class="tl"><span style="color:#c86878;">error:</span><span style="color:#f8f8f6;"> undefined: </span><span style="color:#e07838;">helper.Init</span></div>
+    <div class="tl"><span style="color:#e07838;">›</span><span style="color:#c3c2b7;"> _</span></div>
+  </div>
+</div>
+
+<div class="palette-grid">
+  <div>
+    <p class="pal-heading">Base / chrome</p>
+    <div class="pal-group">
+      <div class="pal-row"><div class="psw" style="background:#212120;"></div><span class="phex">#212120</span><span class="prole">sidebar / tab bar</span><span class="pbadge aal">13% L</span></div>
+      <div class="pal-row"><div class="psw" style="background:#1f1f1e;"></div><span class="phex">#1f1f1e</span><span class="prole">terminal panel</span><span class="pbadge aal">12% L</span></div>
+      <div class="pal-row"><div class="psw" style="background:#1c1c1b;"></div><span class="phex">#1c1c1b</span><span class="prole">editor surface</span><span class="pbadge aal">11% L</span></div>
+      <div class="pal-row"><div class="psw" style="background:#252523;"></div><span class="phex">#252523</span><span class="prole">active line highlight</span><span class="pbadge aal">14% L</span></div>
+      <div class="pal-row"><div class="psw" style="background:#f8f8f6;"></div><span class="phex">#f8f8f6</span><span class="prole">primary text</span><span class="pbadge aaa">16:1 AAA</span></div>
+      <div class="pal-row"><div class="psw" style="background:#c3c2b7;"></div><span class="phex">#c3c2b7</span><span class="prole">inactive tabs / files</span><span class="pbadge aaa">9.5:1 AAA</span></div>
+      <div class="pal-row"><div class="psw" style="background:#686866;"></div><span class="phex">#686866</span><span class="prole">comments</span><span class="pbadge aal">3.1:1</span></div>
+      <div class="pal-row"><div class="psw" style="background:#6a6a68;"></div><span class="phex">#6a6a68</span><span class="prole">line numbers / chrome labels</span><span class="pbadge aal">3.1:1</span></div>
+    </div>
+  </div>
+  <div>
+    <p class="pal-heading">Syntax accents</p>
+    <div class="pal-group">
+      <div class="pal-row"><div class="psw" style="background:#b888c8;"></div><span class="phex">#b888c8</span><span class="prole">mauve · keywords / control flow</span><span class="pbadge aa">6.0:1 AA</span></div>
+      <div class="pal-row"><div class="psw" style="background:#80c0b0;"></div><span class="phex">#80c0b0</span><span class="prole">teal · strings / literals</span><span class="pbadge aaa">8.2:1 AAA</span></div>
+      <div class="pal-row"><div class="psw" style="background:#e07838;"></div><span class="phex">#e07838</span><span class="prole">orange · functions / types</span><span class="pbadge aa">5.6:1 AA</span></div>
+      <div class="pal-row"><div class="psw" style="background:#7a8a9a; border:0.5px solid rgba(255,255,255,0.15);"></div><span class="phex">#7a8a9a</span><span class="prole">steel · variables / params</span><span class="pbadge aa">4.8:1 AA</span></div>
+      <div class="pal-row"><div class="psw" style="background:#c86878;"></div><span class="phex">#c86878</span><span class="prole">rose · errors / warnings</span><span class="pbadge aa">4.6:1 AA</span></div>
+    </div>
+    <p class="pal-heading" style="margin-top:1.25rem;">UI accents</p>
+    <div class="pal-group">
+      <div class="pal-row"><div class="psw" style="background:#e07838;"></div><span class="phex">#e07838</span><span class="prole">active tab underline / cursor</span></div>
+      <div class="pal-row"><div class="psw" style="background:#e07838; opacity:0.45;"></div><span class="phex">#e07838 @45%</span><span class="prole">active line left bar</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
