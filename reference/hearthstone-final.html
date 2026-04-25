@@ -21,12 +21,12 @@
   .sidebar { width: 165px; padding: 10px 0; flex-shrink: 0; background: #212120; border-right: 0.5px solid rgba(255,255,255,0.05); }
   .si { padding: 3px 14px; font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: default; }
   .si.sh { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
-  .si.active { border-left: 2px solid #e07838; padding-left: 12px; background: #1c1c1b; }
+  .si.active { background: #1c1c1b; }
   .si.indent { padding-left: 24px; }
   .editor { flex: 1; padding: 12px 16px; background: #1c1c1b; font-family: 'SF Mono','Fira Code','Cascadia Code','Consolas',monospace; font-size: 12px; }
   .line { display: flex; gap: 12px; line-height: 1.75; white-space: pre; }
   .ln { min-width: 20px; text-align: right; user-select: none; color: #6a6a68; }
-  .hl { background: #252523; border-left: 2px solid rgba(224,120,56,0.45); }
+  .hl { background: #252523; }
   .hl .ln { color: #888886; }
   .terminal { padding: 10px 16px; background: #1f1f1e; border-top: 0.5px solid rgba(255,255,255,0.05); font-family: 'SF Mono','Fira Code','Cascadia Code','Consolas',monospace; font-size: 12px; line-height: 1.7; }
   .tl { display: flex; white-space: pre; }
@@ -42,7 +42,7 @@
   .phex { font-family: monospace; font-size: 12px; color: #f8f8f6; min-width: 68px; }
   .prole { font-size: 11px; color: #6a6a68; flex: 1; }
   .pbadge { font-size: 10px; padding: 1px 7px; border-radius: 10px; white-space: nowrap; }
-  .aaa { background: rgba(128,192,176,0.15); color: #80c0b0; }
+  .aaa { background: rgba(128,192,176,0.15); color: #a0c088; }
   .aa  { background: rgba(224,120,56,0.12);  color: #e07838; }
   .aal { background: rgba(255,255,255,0.07);  color: #6a6a68; }
 </style>
@@ -82,9 +82,9 @@
       <div class="line"><span class="ln">2</span><span style="color:#b888c8;">package</span><span> main</span></div>
       <div class="line"><span class="ln">3</span></div>
       <div class="line"><span class="ln">4</span><span style="color:#b888c8;">import</span><span> (</span></div>
-      <div class="line"><span class="ln">5</span><span>    </span><span style="color:#80c0b0;">"fmt"</span></div>
-      <div class="line"><span class="ln">6</span><span>    </span><span style="color:#80c0b0;">"net/http"</span></div>
-      <div class="line"><span class="ln">7</span><span>    </span><span style="color:#80c0b0;">"os"</span></div>
+      <div class="line"><span class="ln">5</span><span>    </span><span style="color:#a0c088;">"fmt"</span></div>
+      <div class="line"><span class="ln">6</span><span>    </span><span style="color:#a0c088;">"net/http"</span></div>
+      <div class="line"><span class="ln">7</span><span>    </span><span style="color:#a0c088;">"os"</span></div>
       <div class="line"><span class="ln">8</span><span>)</span></div>
       <div class="line"><span class="ln">9</span></div>
       <div class="line"><span class="ln">10</span><span style="color:#b888c8;">type</span><span> </span><span style="color:#e07838;">Config</span><span> </span><span style="color:#b888c8;">struct</span><span> {</span></div>
@@ -94,23 +94,23 @@
       <div class="line"><span class="ln">14</span></div>
       <div class="line hl"><span class="ln">15</span><span style="color:#b888c8;">func</span><span> </span><span style="color:#e07838;">handleRequest</span><span>(</span><span style="color:#7a8a9a;">w</span><span> </span><span style="color:#e07838;">http.ResponseWriter</span><span>, </span><span style="color:#7a8a9a;">r</span><span> *</span><span style="color:#e07838;">http.Request</span><span>) {</span></div>
       <div class="line hl"><span class="ln">16</span><span>    </span><span style="color:#7a8a9a;">status</span><span> := </span><span style="color:#e07838;">http.StatusOK</span></div>
-      <div class="line hl"><span class="ln">17</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">r</span><span>.</span><span style="color:#e07838;">Method</span><span> != </span><span style="color:#80c0b0;">"GET"</span><span> {</span></div>
+      <div class="line hl"><span class="ln">17</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">r</span><span>.</span><span style="color:#e07838;">Method</span><span> != </span><span style="color:#a0c088;">"GET"</span><span> {</span></div>
       <div class="line"><span class="ln">18</span><span>        </span><span style="color:#7a8a9a;">status</span><span> = </span><span style="color:#e07838;">http.StatusMethodNotAllowed</span></div>
       <div class="line"><span class="ln">19</span><span>    }</span></div>
-      <div class="line"><span class="ln">20</span><span>    </span><span style="color:#e07838;">fmt.Fprintf</span><span>(</span><span style="color:#7a8a9a;">w</span><span>, </span><span style="color:#80c0b0;">"status: %d"</span><span>, </span><span style="color:#7a8a9a;">status</span><span>)</span></div>
+      <div class="line"><span class="ln">20</span><span>    </span><span style="color:#e07838;">fmt.Fprintf</span><span>(</span><span style="color:#7a8a9a;">w</span><span>, </span><span style="color:#a0c088;">"status: %d"</span><span>, </span><span style="color:#7a8a9a;">status</span><span>)</span></div>
       <div class="line"><span class="ln">21</span><span>}</span></div>
       <div class="line"><span class="ln">22</span></div>
       <div class="line"><span class="ln">23</span><span style="color:#b888c8;">var</span><span> </span><span style="color:#7a8a9a;">cfg</span><span> = </span><span style="color:#e07838;">Config</span><span>{</span></div>
-      <div class="line"><span class="ln">24</span><span>    </span><span style="color:#e07838;">Addr</span><span>:    </span><span style="color:#80c0b0;">":8080"</span><span>,</span></div>
-      <div class="line"><span class="ln">25</span><span>    </span><span style="color:#e07838;">Version</span><span>: </span><span style="color:#80c0b0;">"1.0.0"</span><span>,</span></div>
+      <div class="line"><span class="ln">24</span><span>    </span><span style="color:#e07838;">Addr</span><span>:    </span><span style="color:#a0c088;">":8080"</span><span>,</span></div>
+      <div class="line"><span class="ln">25</span><span>    </span><span style="color:#e07838;">Version</span><span>: </span><span style="color:#a0c088;">"1.0.0"</span><span>,</span></div>
       <div class="line"><span class="ln">26</span><span>}</span></div>
       <div class="line"><span class="ln">27</span></div>
       <div class="line"><span class="ln">28</span><span style="color:#b888c8;">func</span><span> </span><span style="color:#e07838;">main</span><span>() {</span></div>
-      <div class="line"><span class="ln">29</span><span>    </span><span style="color:#7a8a9a;">port</span><span> := </span><span style="color:#e07838;">os.Getenv</span><span>(</span><span style="color:#80c0b0;">"PORT"</span><span>)</span></div>
-      <div class="line"><span class="ln">30</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">port</span><span> == </span><span style="color:#80c0b0;">""</span><span> {</span></div>
+      <div class="line"><span class="ln">29</span><span>    </span><span style="color:#7a8a9a;">port</span><span> := </span><span style="color:#e07838;">os.Getenv</span><span>(</span><span style="color:#a0c088;">"PORT"</span><span>)</span></div>
+      <div class="line"><span class="ln">30</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">port</span><span> == </span><span style="color:#a0c088;">""</span><span> {</span></div>
       <div class="line"><span class="ln">31</span><span>        </span><span style="color:#7a8a9a;">port</span><span> = </span><span style="color:#7a8a9a;">cfg</span><span>.</span><span style="color:#e07838;">Addr</span></div>
       <div class="line"><span class="ln">32</span><span>    }</span></div>
-      <div class="line"><span class="ln">33</span><span>    </span><span style="color:#e07838;">http.HandleFunc</span><span>(</span><span style="color:#80c0b0;">"/"</span><span>, </span><span style="color:#e07838;">handleRequest</span><span>)</span></div>
+      <div class="line"><span class="ln">33</span><span>    </span><span style="color:#e07838;">http.HandleFunc</span><span>(</span><span style="color:#a0c088;">"/"</span><span>, </span><span style="color:#e07838;">handleRequest</span><span>)</span></div>
       <div class="line"><span class="ln">34</span><span>    </span><span style="color:#b888c8;">if</span><span> </span><span style="color:#7a8a9a;">err</span><span> := </span><span style="color:#e07838;">http.ListenAndServe</span><span>(</span><span style="color:#7a8a9a;">port</span><span>, </span><span style="color:#e07838;">nil</span><span>); </span><span style="color:#7a8a9a;">err</span><span> != </span><span style="color:#e07838;">nil</span><span> {</span></div>
       <div class="line"><span class="ln">35</span><span>        </span><span style="color:#c86878;">panic</span><span>(</span><span style="color:#7a8a9a;">err</span><span>)</span></div>
       <div class="line"><span class="ln">36</span><span>    }</span></div>
@@ -123,7 +123,7 @@
       <span class="tt" style="color:#c3c2b7;">output</span>
       <span class="tt" style="color:#c3c2b7;">problems</span>
     </div>
-    <div class="tl"><span style="color:#e07838;">~/my-project</span><span style="color:#686866;"> on </span><span style="color:#80c0b0;">main</span><span style="color:#686866;"> › </span><span style="color:#f8f8f6;">go run .</span></div>
+    <div class="tl"><span style="color:#e07838;">~/my-project</span><span style="color:#686866;"> on </span><span style="color:#a0c088;">main</span><span style="color:#686866;"> › </span><span style="color:#f8f8f6;">go run .</span></div>
     <div class="tl"><span style="color:#c86878;">error:</span><span style="color:#f8f8f6;"> undefined: </span><span style="color:#e07838;">helper.Init</span></div>
     <div class="tl"><span style="color:#e07838;">›</span><span style="color:#c3c2b7;"> _</span></div>
   </div>
@@ -147,7 +147,7 @@
     <p class="pal-heading">Syntax accents</p>
     <div class="pal-group">
       <div class="pal-row"><div class="psw" style="background:#b888c8;"></div><span class="phex">#b888c8</span><span class="prole">mauve · keywords / control flow</span><span class="pbadge aa">6.0:1 AA</span></div>
-      <div class="pal-row"><div class="psw" style="background:#80c0b0;"></div><span class="phex">#80c0b0</span><span class="prole">teal · strings / literals</span><span class="pbadge aaa">8.2:1 AAA</span></div>
+      <div class="pal-row"><div class="psw" style="background:#a0c088;"></div><span class="phex">#a0c088</span><span class="prole">sage · strings / literals</span><span class="pbadge aaa">8.3:1 AAA</span></div>
       <div class="pal-row"><div class="psw" style="background:#e07838;"></div><span class="phex">#e07838</span><span class="prole">orange · functions / types</span><span class="pbadge aa">5.6:1 AA</span></div>
       <div class="pal-row"><div class="psw" style="background:#7a8a9a; border:0.5px solid rgba(255,255,255,0.15);"></div><span class="phex">#7a8a9a</span><span class="prole">steel · variables / params</span><span class="pbadge aa">4.8:1 AA</span></div>
       <div class="pal-row"><div class="psw" style="background:#c86878;"></div><span class="phex">#c86878</span><span class="prole">rose · errors / warnings</span><span class="pbadge aa">4.6:1 AA</span></div>

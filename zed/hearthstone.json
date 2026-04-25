@@ -1,0 +1,210 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "name": "Hearthstone",
+  "author": "Jackson Hughes",
+  "themes": [
+    {
+      "name": "Hearthstone",
+      "appearance": "dark",
+      "style": {
+
+        // ── Editor surfaces ─────────────────────────────────
+        "background":                          "#1c1c1b",
+        "editor.background":                   "#1c1c1b",
+        "editor.foreground":                   "#f8f8f6",
+        "editor.line_number":                  "#6a6a68",
+        "editor.active_line_number":           "#c3c2b7",
+        "editor.active_line.background":       "#252523",
+        "editor.highlighted_line.background":  "#252523",
+        "editor.gutter.background":            "#1c1c1b",
+
+        // ── Cursor & selection ───────────────────────────────
+        "editor.caret":                        "#e07838",
+        "editor.selection.background":         "#2e2e2c",
+        "editor.selection.border":             "#2e2e2c",
+        "editor.active_wrap_guide":            "#3a3a37",
+        "editor.wrap_guide":                   "#2a2a28",
+
+        // ── Search ───────────────────────────────────────────
+        "editor.find_match_background":        "#e0783850",
+        "editor.find_match_border":            "#e07838",
+        "editor.find_all_matches_background":  "#e0783825",
+
+        // ── UI surfaces ──────────────────────────────────────
+        "surface.background":                  "#212120",
+        "elevated_surface.background":         "#212120",
+        "panel.background":                    "#212120",
+        "pane.focused_border":                 "#e07838",
+        "panel.focused_border":                "#e07838",
+
+        // ── Status bar ───────────────────────────────────────
+        "status_bar.background":               "#1c1c1b",
+
+        // ── Title bar ────────────────────────────────────────
+        "title_bar.background":                "#1c1c1b",
+        "title_bar.inactive_background":       "#1c1c1b",
+
+        // ── Tab bar ──────────────────────────────────────────
+        "tab_bar.background":                  "#212120",
+        "tab.active_background":               "#1c1c1b",
+        "tab.inactive_background":             "#212120",
+
+        // ── Toolbar ──────────────────────────────────────────
+        "toolbar.background":                  "#1c1c1b",
+
+        // ── Breadcrumbs ──────────────────────────────────────
+        "breadcrumb.foreground":               "#6a6a68",
+        "breadcrumb.active_foreground":        "#c3c2b7",
+
+        // ── Text ─────────────────────────────────────────────
+        "text":                                "#f8f8f6",
+        "text.muted":                          "#c3c2b7",
+        "text.placeholder":                    "#4a4a48",
+        "text.disabled":                       "#4a4a48",
+        "text.accent":                         "#e07838",
+
+        // ── Icons ────────────────────────────────────────────
+        "icon":                                "#c3c2b7",
+        "icon.muted":                          "#686866",
+        "icon.disabled":                       "#4a4a48",
+        "icon.placeholder":                    "#4a4a48",
+        "icon.accent":                         "#e07838",
+
+        // ── Borders & separators ─────────────────────────────
+        "border":                              "#2a2a28",
+        "border.variant":                      "#252523",
+        "border.focused":                      "#e07838",
+        "border.selected":                     "#e07838",
+        "border.transparent":                  "#00000000",
+        "border.disabled":                     "#2a2a28",
+        "elevated_surface.border":             "#2a2a28",
+
+        // ── Scrollbar ────────────────────────────────────────
+        "scrollbar.thumb.background":          "#6a6a6840",
+        "scrollbar.thumb.hover_background":    "#6a6a6870",
+        "scrollbar.track.background":          "#00000000",
+        "scrollbar.track.border":              "#2a2a28",
+
+        // ── Lists & menus ─────────────────────────────────────
+        "element.background":                  "#00000000",
+        "element.hover":                       "#252523",
+        "element.active":                      "#2e2e2c",
+        "element.selected":                    "#252523",
+        "element.disabled":                    "#2a2a28",
+        "drop_target.background":              "#e0783820",
+        "ghost_element.background":            "#00000000",
+        "ghost_element.hover":                 "#252523",
+        "ghost_element.active":                "#2e2e2c",
+        "ghost_element.selected":              "#252523",
+        "ghost_element.disabled":              "#2a2a28",
+
+        // ── Terminal ─────────────────────────────────────────
+        "terminal.background":                 "#1f1f1e",
+        "terminal.foreground":                 "#f8f8f6",
+        "terminal.bright_foreground":          "#f8f8f6",
+        "terminal.dim_foreground":             "#6a6a68",
+        "terminal.ansi.black":                 "#212120",
+        "terminal.ansi.red":                   "#c86878",
+        "terminal.ansi.green":                 "#a0c088",
+        "terminal.ansi.yellow":                "#e07838",
+        // Blue → orange: matches Ghostty p10k DIR_FOREGROUND tuning across the suite
+        "terminal.ansi.blue":                  "#e07838",
+        "terminal.ansi.magenta":               "#b888c8",
+        "terminal.ansi.cyan":                  "#a0c088",
+        "terminal.ansi.white":                 "#c3c2b7",
+        "terminal.ansi.bright_black":          "#686866",
+        "terminal.ansi.bright_red":            "#d898a8",
+        "terminal.ansi.bright_green":          "#b8d0a0",
+        "terminal.ansi.bright_yellow":         "#f09848",
+        "terminal.ansi.bright_blue":           "#f09848",
+        "terminal.ansi.bright_magenta":        "#c8a0d8",
+        "terminal.ansi.bright_cyan":           "#b8d0a0",
+        "terminal.ansi.bright_white":          "#f8f8f6",
+
+        // ── Git status ───────────────────────────────────────
+        "created":                             "#a0c088",
+        "modified":                            "#e07838",
+        "deleted":                             "#c86878",
+        "conflict":                            "#c86878",
+        "hidden":                              "#4a4a48",
+        "ignored":                             "#4a4a48",
+        "renamed":                             "#b888c8",
+
+        // ── Diagnostics ──────────────────────────────────────
+        "error":                               "#c86878",
+        "warning":                             "#e07838",
+        "info":                                "#a0c088",
+        "hint":                                "#7a8a9a",
+        "predictive":                          "#4a4a48",
+
+        // ── Version control diff ─────────────────────────────
+        "version_control.added":               "#a0c08830",
+        "version_control.modified":            "#e0783830",
+        "version_control.deleted":             "#c8687830",
+        "version_control.conflict":            "#c8687830",
+        "version_control.renamed":             "#b888c830",
+
+        // ── Diff editor ──────────────────────────────────────
+        "diff.background":                     "#00000000",
+
+        // ── Players (multi-cursor) ───────────────────────────
+        // Player 0 = local user: cursor stays orange (theme accent), selection
+        // is neutral (matches editor.selection.background). Players 1-3 keep
+        // their distinct colours so collaborators remain visually separable.
+        "players": [
+          { "cursor": "#e07838", "selection": "#2e2e2c",   "background": "#e07838" },
+          { "cursor": "#a0c088", "selection": "#a0c08840", "background": "#a0c088" },
+          { "cursor": "#b888c8", "selection": "#b888c840", "background": "#b888c8" },
+          { "cursor": "#7a8a9a", "selection": "#7a8a9a40", "background": "#7a8a9a" }
+        ],
+
+        // ── Syntax highlighting ──────────────────────────────
+        "syntax": {
+          "attribute":       { "color": "#b888c8", "font_style": "italic" },
+          "boolean":         { "color": "#a0c088" },
+          "comment":         { "color": "#686866", "font_style": "italic" },
+          "comment.doc":     { "color": "#686866", "font_style": "italic" },
+          "constant":        { "color": "#a0c088" },
+          "constructor":     { "color": "#e07838" },
+          "embedded":        { "color": "#f8f8f6" },
+          "emphasis":        { "color": "#f8f8f6", "font_style": "italic" },
+          "emphasis.strong": { "color": "#f8f8f6", "font_weight": 700 },
+          "enum":            { "color": "#e07838" },
+          "function":        { "color": "#e07838" },
+          "function.builtin":{ "color": "#e07838" },
+          "function.call":   { "color": "#e07838" },
+          "hint":            { "color": "#7a8a9a" },
+          "keyword":         { "color": "#b888c8" },
+          "label":           { "color": "#b888c8" },
+          "link_text":       { "color": "#a0c088" },
+          "link_uri":        { "color": "#a0c088" },
+          "number":          { "color": "#a0c088" },
+          "operator":        { "color": "#888884" },
+          "predictive":      { "color": "#4a4a48", "font_style": "italic" },
+          "preproc":         { "color": "#b888c8" },
+          "primary":         { "color": "#f8f8f6" },
+          "property":        { "color": "#e07838" },
+          "punctuation":     { "color": "#888884" },
+          "punctuation.bracket":   { "color": "#888884" },
+          "punctuation.delimiter": { "color": "#888884" },
+          "punctuation.list_marker": { "color": "#e07838" },
+          "punctuation.special":   { "color": "#a0c088" },
+          "string":          { "color": "#a0c088" },
+          "string.escape":   { "color": "#b8d0a0" },
+          "string.regex":    { "color": "#a0c088" },
+          "string.special":  { "color": "#b8d0a0" },
+          "string.special.symbol": { "color": "#a0c088" },
+          "tag":             { "color": "#b888c8" },
+          "text.literal":    { "color": "#a0c088" },
+          "title":           { "color": "#e07838", "font_weight": 700 },
+          "type":            { "color": "#e07838" },
+          "type.builtin":    { "color": "#e07838" },
+          "variable":        { "color": "#7a8a9a" },
+          "variable.member": { "color": "#e07838" },
+          "variable.parameter": { "color": "#7a8a9a" },
+          "variable.special":   { "color": "#b888c8", "font_style": "italic" }
+        }
+      }
+    }
+  ]
+}
