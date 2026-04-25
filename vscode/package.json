@@ -1,0 +1,22 @@
+{
+  "name": "hearthstone-theme",
+  "displayName": "Hearthstone",
+  "description": "Dark theme. Warm charcoal base, earthy syntax palette — orange, mauve, teal, steel, and rose.",
+  "version": "0.1.0",
+  "publisher": "jackson-hughes",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Hearthstone",
+        "uiTheme": "vs-dark",
+        "path": "./themes/hearthstone-color-theme.json"
+      }
+    ]
+  }
+}
