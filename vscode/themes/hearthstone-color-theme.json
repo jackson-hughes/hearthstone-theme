@@ -7,7 +7,7 @@
 
     // ── Editor surfaces ───────────────────────────────────────
     "editor.background":                          "#1c1c1b",
-    "editor.foreground":                          "#f8f8f6",
+    "editor.foreground":                          "#c3c2b7",
     "editorLineNumber.foreground":                "#686866",
     "editorLineNumber.activeForeground":          "#c3c2b7",
     "editor.lineHighlightBackground":             "#252523",
@@ -452,6 +452,11 @@
     {
       "name": "Regular expressions",
       "scope": ["string.regexp"],
+      "settings": { "foreground": "#a0c088" }
+    },
+    {
+      "name": "Lua table-constructor string keys",
+      "scope": ["entity.other.attribute.lua"],
       "settings": { "foreground": "#a0c088" }
     },
 
