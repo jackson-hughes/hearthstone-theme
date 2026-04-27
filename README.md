@@ -123,15 +123,21 @@ theme = hearthstone
 
 ### VS Code
 
-The marketplace publish is pending — for now, install manually by copying or
-symlinking the `vscode` directory into your VS Code extensions folder:
+Build the extension package from the `vscode/` directory:
 
 ```sh
-ln -s "$(pwd)/vscode" ~/.vscode/extensions/jackson-hughes.hearthstone-theme-0.1.0
+cd vscode
+npm run package
 ```
 
-Reload the window (`Cmd+Shift+P` → "Developer: Reload Window"), then activate
-via `Cmd+K Cmd+T` and pick **Hearthstone**.
+Then install the generated `.vsix`:
+
+```sh
+code --install-extension hearthstone-theme-0.1.0.vsix
+```
+
+Activate via `Cmd+K Cmd+T` (macOS) or `Ctrl+K Ctrl+T` (Windows/Linux) and
+pick **Hearthstone**. Reload the window if the theme doesn't appear immediately.
 
 ### Zed
 
