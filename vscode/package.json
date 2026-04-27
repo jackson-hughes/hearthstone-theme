@@ -18,5 +18,8 @@
         "path": "./themes/hearthstone-color-theme.json"
       }
     ]
+  },
+  "scripts": {
+    "package": "vsce package --allow-missing-repository --skip-license"
   }
 }
