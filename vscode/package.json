@@ -20,6 +20,6 @@
     ]
   },
   "scripts": {
-    "package": "vsce package --allow-missing-repository --skip-license"
+    "package": "npx @vscode/vsce package --allow-missing-repository --skip-license"
   }
 }
