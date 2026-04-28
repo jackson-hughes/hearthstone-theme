@@ -220,14 +220,3 @@ Faces are mapped for the standard `font-lock-*` set plus Magit, Org, Dired,
 Vertico/Marginalia/Orderless, Company, Treemacs, Flycheck/Flymake, Eglot,
 Meow, Which-key, Rainbow-delimiters, Markdown, and the term/vterm 16-colour
 ANSI palette.
-
-> **Tree-sitter note.** Stock `*-ts-mode` modes (e.g. `go-ts-mode`) only
-> fontify identifier *uses* at `treesit-font-lock-level` 4. Bump per-mode
-> via a hook if you want variables/parameters/property accesses coloured:
-> ```elisp
-> (add-hook 'go-ts-mode-hook
->           (lambda () (setq-local treesit-font-lock-level 4)))
-> ```
-> Identifier captures absent from the upstream queries (e.g. Go package
-> qualifiers) will still render in the default face — that's a mode
-> limitation, not a theme one.
