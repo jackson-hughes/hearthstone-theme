@@ -9,7 +9,8 @@ for long coding sessions.
 - **Backgrounds** derived from Claude.ai's design system: `hsl(60, 2%, n%)` — 
   almost pure grey with a tiny warm yellow tint that prevents the cold-screen feel
 - **Three-tier contrast system** for UI chrome, calculated against WCAG standards:
-  active text (16:1 AAA), inactive navigation (9.5:1 AAA), decorative labels (3:1)
+  emphasis text (16:1 AAA), editor body and inactive navigation (9.5:1 AAA),
+  decorative labels (3:1)
 - **Five syntax accents** spread across the colour wheel (mauve 285°, steel 210°,
   sage 95°, orange 23°, rose 350°), all passing WCAG AA on the editor background
 - **Semantic token assignment**: three-way split — orange for named
@@ -34,12 +35,12 @@ for long coding sessions.
 
 ### Text tiers
 
-| Role                  | Hex       | Contrast on editor | WCAG  |
-|-----------------------|-----------|--------------------|-------|
-| Primary text          | `#f8f8f6` | 16.0:1             | AAA ✓ |
-| Inactive tabs / files | `#c3c2b7` | 9.5:1              | AAA ✓ |
-| Operators / punctuation | `#888884` | 5.0:1            | AA ✓  |
-| Comments / chrome labels | `#686866` | 3.1:1           | AA lg |
+| Role                          | Hex       | Contrast on editor | WCAG  |
+|-------------------------------|-----------|--------------------|-------|
+| Emphasis text · active tabs   | `#f8f8f6` | 16.0:1             | AAA ✓ |
+| Editor body · inactive tabs   | `#c3c2b7` | 9.5:1              | AAA ✓ |
+| Operators / punctuation       | `#888884` | 5.0:1              | AA ✓  |
+| Comments / chrome labels      | `#686866` | 3.1:1              | AA lg |
 
 ### Syntax accents
 
@@ -200,4 +201,33 @@ steel (command).
 
 ### Emacs
 
-_Coming soon._
+Requires Emacs 27.1+. Copy or symlink `emacs/hearthstone-theme.el` into your
+custom-theme load path:
+
+```sh
+mkdir -p ~/.emacs.d/themes
+ln -s "$(pwd)/emacs/hearthstone-theme.el" ~/.emacs.d/themes/hearthstone-theme.el
+```
+
+Then in your config:
+
+```elisp
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'hearthstone t)
+```
+
+Faces are mapped for the standard `font-lock-*` set plus Magit, Org, Dired,
+Vertico/Marginalia/Orderless, Company, Treemacs, Flycheck/Flymake, Eglot,
+Meow, Which-key, Rainbow-delimiters, Markdown, and the term/vterm 16-colour
+ANSI palette.
+
+> **Tree-sitter note.** Stock `*-ts-mode` modes (e.g. `go-ts-mode`) only
+> fontify identifier *uses* at `treesit-font-lock-level` 4. Bump per-mode
+> via a hook if you want variables/parameters/property accesses coloured:
+> ```elisp
+> (add-hook 'go-ts-mode-hook
+>           (lambda () (setq-local treesit-font-lock-level 4)))
+> ```
+> Identifier captures absent from the upstream queries (e.g. Go package
+> qualifiers) will still render in the default face — that's a mode
+> limitation, not a theme one.

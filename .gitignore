@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Emacs byte-compiled output
+*.elc

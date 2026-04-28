@@ -11,7 +11,7 @@
         // ── Editor surfaces ─────────────────────────────────
         "background":                          "#1c1c1b",
         "editor.background":                   "#1c1c1b",
-        "editor.foreground":                   "#f8f8f6",
+        "editor.foreground":                   "#c3c2b7",
         "editor.line_number":                  "#6a6a68",
         "editor.active_line_number":           "#c3c2b7",
         "editor.active_line.background":       "#252523",
@@ -161,7 +161,7 @@
         // ── Syntax highlighting ──────────────────────────────
         "syntax": {
           "attribute":       { "color": "#b888c8", "font_style": "italic" },
-          "boolean":         { "color": "#a0c088" },
+          "boolean":         { "color": "#e07838" },
           "comment":         { "color": "#686866", "font_style": "italic" },
           "comment.doc":     { "color": "#686866", "font_style": "italic" },
           "constant":        { "color": "#a0c088" },

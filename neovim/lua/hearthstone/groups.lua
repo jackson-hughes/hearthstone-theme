@@ -4,9 +4,9 @@ function M.get(p)
   return {
 
     -- ── Core editor surface ───────────────────────────────────────────────
-    Normal          = { fg = p.fg_primary,  bg = p.bg_editor },
-    NormalFloat     = { fg = p.fg_primary,  bg = p.bg_panel },
-    NormalNC        = { fg = p.fg_inactive, bg = p.bg_editor },
+    Normal          = { fg = p.fg_inactive, bg = p.bg_editor },
+    NormalFloat     = { fg = p.fg_inactive, bg = p.bg_panel },
+    NormalNC        = { fg = p.fg_chrome,   bg = p.bg_editor },
     FloatBorder     = { fg = p.border,      bg = p.bg_panel },
     FloatTitle      = { fg = p.orange,      bg = p.bg_panel, bold = true },
 

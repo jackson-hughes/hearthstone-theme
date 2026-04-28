@@ -52,7 +52,7 @@
    'hearthstone
 
    ;; ── Core faces ───────────────────────────────────────────────
-   `(default                          ((t (:foreground ,fg-primary :background ,bg-editor))))
+   `(default                          ((t (:foreground ,fg-inactive :background ,bg-editor))))
    `(cursor                           ((t (:background ,cursor))))
    `(fringe                           ((t (:foreground ,fg-chrome :background ,bg-editor))))
    `(minibuffer-prompt                ((t (:foreground ,orange :weight bold))))
@@ -103,7 +103,7 @@
    `(font-lock-comment-face           ((t (:foreground ,fg-comment :slant italic))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,fg-comment :slant italic))))
    `(font-lock-doc-face               ((t (:foreground ,fg-comment :slant italic))))
-   `(font-lock-doc-string-face        ((t (:foreground ,fg-comment :slant italic))))
+   `(font-lock-doc-markup-face        ((t (:foreground ,fg-comment :slant italic))))
    `(font-lock-string-face            ((t (:foreground ,sage))))
    `(font-lock-regexp-grouping-construct ((t (:foreground ,sage :weight bold))))
    `(font-lock-regexp-grouping-backslash ((t (:foreground ,sage-bright))))
