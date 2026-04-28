@@ -152,7 +152,51 @@ automatically — no restart needed.
 
 ### Neovim
 
-_Coming soon._
+Requires Neovim 0.8+ and `termguicolors` (enabled automatically by the theme).
+
+**lazy.nvim**
+
+```lua
+{
+  "jackson-hughes/hearthstone-theme",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("hearthstone")
+  end,
+}
+```
+
+> lazy.nvim v9+ supports `rtp = "neovim"` to target the subdirectory. For
+> earlier versions, clone the repo and point `dir` at the `neovim/`
+> subdirectory directly:
+> ```lua
+> { dir = "/path/to/hearthstone-theme/neovim", lazy = false, priority = 1000,
+>   config = function() vim.cmd.colorscheme("hearthstone") end }
+> ```
+
+**vim-plug**
+
+```vim
+Plug 'jackson-hughes/hearthstone-theme', { 'rtp': 'neovim' }
+```
+
+Then in your config:
+
+```vim
+colorscheme hearthstone
+```
+
+**Lualine**
+
+A lualine theme is included. After setting the colorscheme, configure lualine:
+
+```lua
+require("lualine").setup({ options = { theme = "hearthstone" } })
+```
+
+Mode colours: sage (normal), orange (insert), mauve (visual), rose (replace),
+steel (command).
 
 ### Emacs
 
