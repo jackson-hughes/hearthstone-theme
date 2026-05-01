@@ -42,12 +42,12 @@
     // ── Brackets ─────────────────────────────────────────────
     "editorBracketMatch.background":              "#e0783820",
     "editorBracketMatch.border":                  "#00000000",
-    "editorBracketHighlight.foreground1":         "#e07838",
-    "editorBracketHighlight.foreground2":         "#a0c088",
-    "editorBracketHighlight.foreground3":         "#b888c8",
-    "editorBracketHighlight.foreground4":         "#f09848",
-    "editorBracketHighlight.foreground5":         "#b8d0a0",
-    "editorBracketHighlight.foreground6":         "#c8a0d8",
+    "editorBracketHighlight.foreground1":         "#888884",
+    "editorBracketHighlight.foreground2":         "#888884",
+    "editorBracketHighlight.foreground3":         "#888884",
+    "editorBracketHighlight.foreground4":         "#888884",
+    "editorBracketHighlight.foreground5":         "#888884",
+    "editorBracketHighlight.foreground6":         "#888884",
     "editorBracketHighlight.unexpectedBracket.foreground": "#c86878",
 
     // ── Sidebar ───────────────────────────────────────────────
@@ -697,6 +697,18 @@
       "settings": { "foreground": "#b888c8" }
     },
 
+    // ── HCL / Terraform ──────────────────────────────────────
+    {
+      "name": "HCL block types (resource, data, variable etc)",
+      "scope": ["entity.name.type.terraform"],
+      "settings": { "foreground": "#b888c8" }
+    },
+    {
+      "name": "HCL block labels",
+      "scope": ["variable.other.enummember.hcl"],
+      "settings": { "foreground": "#a0c088" }
+    },
+
     // ── Errors & invalid ──────────────────────────────────────
     {
       "name": "Invalid / deprecated",
@@ -728,6 +740,8 @@
     "keyword":                "#b888c8",
     "comment":                { "foreground": "#686866", "italic": true },
     "selfKeyword":            { "foreground": "#b888c8", "italic": true },
-    "operator":               "#888884"
+    "operator":               "#888884",
+    "type:terraform":         "#b888c8",
+    "enumMember:terraform":   "#a0c088"
   }
 }
