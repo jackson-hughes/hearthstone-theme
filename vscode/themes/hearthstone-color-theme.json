@@ -209,12 +209,10 @@
     "peekViewTitleDescription.foreground":        "#686866",
 
     // ── Diff editor ───────────────────────────────────────────
-    "diffEditor.insertedTextBackground":          "#a0c08818",
-    "diffEditor.insertedLineBackground":          "#a0c08818",
-    "diffEditor.removedTextBackground":           "#c8687818",
-    "diffEditor.removedLineBackground":           "#c8687818",
-    "diffEditorGutter.insertedLineBackground":    "#a0c08830",
-    "diffEditorGutter.removedLineBackground":     "#c8687830",
+    "diffEditor.insertedTextBackground":          "#00000000",
+    "diffEditor.insertedLineBackground":          "#a0c08830",
+    "diffEditor.removedTextBackground":           "#00000000",
+    "diffEditor.removedLineBackground":           "#c8687830",
 
     // ── Merge conflict regions ────────────────────────────────
     "merge.currentHeaderBackground":              "#a0c08840",
