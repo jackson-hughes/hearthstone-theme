@@ -706,6 +706,21 @@
       "scope": ["variable.other.enummember.hcl"],
       "settings": { "foreground": "#a0c088" }
     },
+    {
+      // HashiCorp's HCL/Terraform grammar leaves several reference cases
+      // untagged: leading identifiers of a chain at the top of a block body
+      // (`libvirt_volume` in `x = libvirt_volume.foo`); special idents
+      // (`each`, `count`, `self`); the entire chain inside object-literal
+      // values (`{ k = libvirt_volume.foo.id }`); for-expression bindings;
+      // and bare attribute references at `.tfvars` file root. Without this
+      // fallback they render as plain body text. `source.hcl` matches both
+      // the Terraform grammar (`source.hcl.terraform`) and the plain HCL
+      // grammar (`source.hcl`, used by Packer/Nomad). More specific scopes
+      // — strings, numbers, member access, operators — still win.
+      "name": "HCL/Terraform untagged identifiers (grammar fallback)",
+      "scope": ["source.hcl"],
+      "settings": { "foreground": "#7a8a9a" }
+    },
 
     // ── Errors & invalid ──────────────────────────────────────
     {
