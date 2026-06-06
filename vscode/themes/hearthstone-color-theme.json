@@ -8,7 +8,7 @@
     // ── Editor surfaces ───────────────────────────────────────
     "editor.background":                          "#1c1c1b",
     "editor.foreground":                          "#c3c2b7",
-    "editorLineNumber.foreground":                "#686866",
+    "editorLineNumber.foreground":                "#6a6a68",
     "editorLineNumber.activeForeground":          "#c3c2b7",
     "editor.lineHighlightBackground":             "#252523",
     "editor.lineHighlightBorder":                 "#00000000",
@@ -54,9 +54,9 @@
     "sideBar.background":                         "#212120",
     "sideBar.foreground":                         "#c3c2b7",
     "sideBar.border":                             "#2a2a28",
-    "sideBarTitle.foreground":                    "#686866",
+    "sideBarTitle.foreground":                    "#6a6a68",
     "sideBarSectionHeader.background":            "#212120",
-    "sideBarSectionHeader.foreground":            "#686866",
+    "sideBarSectionHeader.foreground":            "#6a6a68",
     "sideBarSectionHeader.border":                "#2a2a28",
 
     "tree.indentGuidesStroke":                    "#2e2e2c",
@@ -89,11 +89,11 @@
     "tab.unfocusedActiveBackground":              "#1c1c1b",
     "tab.unfocusedActiveForeground":              "#c3c2b7",
     "tab.unfocusedActiveBorderTop":               "#4a4a48",
-    "tab.unfocusedInactiveForeground":            "#686866",
+    "tab.unfocusedInactiveForeground":            "#6a6a68",
 
     // ── Title bar ─────────────────────────────────────────────
     "titleBar.activeBackground":                  "#1c1c1b",
-    "titleBar.activeForeground":                  "#686866",
+    "titleBar.activeForeground":                  "#6a6a68",
     "titleBar.inactiveBackground":                "#1c1c1b",
     "titleBar.inactiveForeground":                "#4a4a48",
     "titleBar.border":                            "#2a2a28",
@@ -101,7 +101,7 @@
     // ── Activity bar ──────────────────────────────────────────
     "activityBar.background":                     "#1c1c1b",
     "activityBar.foreground":                     "#d8d7cc",
-    "activityBar.inactiveForeground":             "#686866",
+    "activityBar.inactiveForeground":             "#6a6a68",
     "activityBar.border":                         "#2a2a28",
     "activityBar.activeBorder":                   "#c05828",
     "activityBarBadge.background":                "#e07838",
@@ -109,7 +109,7 @@
 
     // ── Status bar ────────────────────────────────────────────
     "statusBar.background":                       "#1c1c1b",
-    "statusBar.foreground":                       "#686866",
+    "statusBar.foreground":                       "#6a6a68",
     "statusBar.border":                           "#2a2a28",
     "statusBar.noFolderBackground":               "#1c1c1b",
     "statusBar.debuggingBackground":              "#e07838",
@@ -129,7 +129,7 @@
     "quickInputList.focusForeground":             "#f8f8f6",
     "quickInputList.focusIconForeground":         "#e07838",
     "pickerGroup.border":                         "#2a2a28",
-    "pickerGroup.foreground":                     "#686866",
+    "pickerGroup.foreground":                     "#6a6a68",
 
     // ── Search ────────────────────────────────────────────────
     "searchEditor.findMatchBackground":           "#e0783830",
@@ -167,13 +167,13 @@
     "terminal.ansiBrightWhite":                   "#f8f8f6",
 
     // ── Inlay hints (TS parameter hints etc) ──────────────────
-    "editorInlayHint.foreground":                 "#686866",
+    "editorInlayHint.foreground":                 "#6a6a68",
     "editorInlayHint.background":                 "#00000000",
-    "editorInlayHint.parameterForeground":        "#686866",
+    "editorInlayHint.parameterForeground":        "#6a6a68",
     "editorInlayHint.parameterBackground":        "#00000000",
-    "editorInlayHint.typeForeground":             "#686866",
+    "editorInlayHint.typeForeground":             "#6a6a68",
     "editorInlayHint.typeBackground":             "#00000000",
-    "editorCodeLens.foreground":                  "#686866",
+    "editorCodeLens.foreground":                  "#6a6a68",
 
     // ── Editor widgets (hover, suggest etc) ───────────────────
     "editorWidget.background":                    "#212120",
@@ -206,7 +206,7 @@
     "peekViewResult.selectionForeground":         "#f8f8f6",
     "peekViewTitle.background":                   "#252523",
     "peekViewTitleLabel.foreground":              "#f8f8f6",
-    "peekViewTitleDescription.foreground":        "#686866",
+    "peekViewTitleDescription.foreground":        "#6a6a68",
 
     // ── Diff editor ───────────────────────────────────────────
     "diffEditor.insertedTextBackground":          "#00000000",
@@ -265,7 +265,7 @@
 
     // ── Breadcrumbs ───────────────────────────────────────────
     "breadcrumb.background":                      "#1c1c1b",
-    "breadcrumb.foreground":                      "#686866",
+    "breadcrumb.foreground":                      "#6a6a68",
     "breadcrumb.focusForeground":                 "#c3c2b7",
     "breadcrumb.activeSelectionForeground":       "#f8f8f6",
     "breadcrumbPicker.background":                "#212120",
@@ -426,7 +426,6 @@
       "scope": [
         "entity.name.namespace",
         "entity.name.module",
-        "entity.name.tag.yaml",
         "support.type.primitive"
       ],
       "settings": { "foreground": "#e07838" }
