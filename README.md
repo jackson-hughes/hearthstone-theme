@@ -15,8 +15,9 @@ for long coding sessions.
   sage 95°, orange 23°, rose 350°), all passing WCAG AA on the editor background
 - **Semantic token assignment**: three-way split — orange for named
   identifiers (functions, types, properties, structural keys in JSON/YAML/CSS,
-  markdown headings); mauve for structural keywords and language constructs;
-  sage for literal values (strings, numbers, enum members)
+  markdown headings) and named language constants (booleans, null, enum
+  members); mauve for structural keywords and language constructs; sage for
+  literal values (strings, numbers, regexes, characters)
 - **Active line** marked by background lift only (`#252523`) — no coloured
   outline or left-bar accent, to keep the editor surface quiet
 
@@ -66,7 +67,7 @@ for long coding sessions.
 | Role                  | Value              |
 |-----------------------|--------------------|
 | Active tab underline  | `#e07838`          |
-| Activity bar accent   | `#c05828` (darker variant — see optical note) |
+| Activity bar accent   | `#c05828` (darker variant — the thin active-bar indicator optically blooms at full-strength `#e07838`, so a darker orange reads as equal weight) |
 | Cursor                | `#e07838`          |
 | Selection background  | `#2e2e2c` (neutral brightness lift, no hue) |
 
