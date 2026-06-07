@@ -4,6 +4,10 @@
   "description": "Dark theme. Warm charcoal base, earthy syntax palette — orange, mauve, sage, steel, and rose.",
   "version": "0.1.0",
   "publisher": "jackson-hughes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackson-hughes/hearthstone-theme"
+  },
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -20,7 +24,10 @@
     ]
   },
   "scripts": {
-    "package": "npx @vscode/vsce package --allow-missing-repository --skip-license",
-    "install": "code --install-extension hearthstone-theme-0.1.0.vsix"
+    "package": "vsce package --skip-license",
+    "install-extension": "code --install-extension hearthstone-theme-0.1.0.vsix"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.7.1"
   }
 }

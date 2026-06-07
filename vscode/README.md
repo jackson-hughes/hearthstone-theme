@@ -9,7 +9,7 @@ npm run package
 Then install the generated `.vsix`:
 
 ```sh
-code --install-extension hearthstone-theme-0.1.0.vsix
+npm run install-extension
 ```
 
 Activate via `Cmd+K Cmd+T` (macOS) or `Ctrl+K Ctrl+T` (Windows/Linux) and
