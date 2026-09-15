@@ -28,6 +28,6 @@
     "install-extension": "code --install-extension hearthstone-theme-0.1.0.vsix"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.7.1"
+    "@vscode/vsce": "^4.0.0"
   }
 }
